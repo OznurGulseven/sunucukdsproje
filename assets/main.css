@@ -1,0 +1,266 @@
+:root {
+  /* Colors */
+  --color-primary: #F5F7FF;
+  --color-searchSubmit: #265EEF;
+  --font-family: 'Roboto', sans-serif;
+  --fontsize: 1.5em;
+}
+
+html, body {
+  background-color: var(--color-primary);
+  font-family: var(--font-family);
+}
+
+.container {
+  height: 600px;
+  background-image: url(../src/background.png);
+}
+
+footer {
+  text-align: center;
+  font-size: 12px;
+}
+
+select {
+  border: none;
+  color: grey;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+
+option {
+  background: white;
+}
+
+a {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-left: 15px;
+  font-size: 14px;
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1,h4 {
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h4 {
+  margin-top: -20px;
+  font-weight: normal;
+}
+
+label {
+  color: black;
+}
+
+/* class */
+
+.wrapper {
+  max-width: 1368px;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--color-primary);
+}
+
+
+.Header {
+  display: flex;
+  flex: 0 0 80px;
+  height: 80px;
+  padding-left: 3em;
+  padding-right: 3em;
+  border-bottom: 1px solid white;
+}
+
+.Header-logo {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.Header-menu {
+  max-width: 900px;
+  margin-left: auto;
+}
+
+.Header-menu-user {
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.Header-menu-user, .Header-menu-login {
+  border-radius: 5px;
+  display: inline-flex;
+  padding: 10px;
+}
+
+.Main-content {
+  height: 600px;
+  margin-top: 268px;
+}
+
+.Main-action {
+  color: white;
+  padding-top: 120px;
+  max-width: 1366px;
+  margin-left: auto;
+  margin-right: auto;
+
+  text-align: center;
+}
+
+
+.form-center {
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Main-action-search {
+  margin-top: 10px;
+  width: 100%;
+  padding: 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 20px;
+  background: white;
+}
+
+.Main-action-alternate-submit {
+  width: 20%;
+  border: none;
+  background: var(--color-searchSubmit);
+  color: white;
+  border-radius: 4px;
+  height: 30px;
+}
+
+.Main-action-search > input {
+  margin-top: 20px;
+}
+
+.Main-action-submit {
+  margin-top: 10px;
+  width: 17%;
+  padding-top: 28.9px;
+  padding-bottom: 25.8px;
+  border: none;
+  border-radius: 0 8px 8px 0;
+  color: white;
+  background-color: var(--color-searchSubmit);
+  margin-left: -105px;
+}
+
+.Main-content {
+  max-width: 1366px;
+  text-align: center;
+  justify-content: center;
+}
+
+.Main-content > p {
+  margin-top: 86px;
+  line-height: 21px;
+  margin-bottom: 86px;
+}
+
+.Main-content-card {
+  width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  margin-bottom: 86px;
+}
+
+.Main-content-card-item-1 {
+  width: 380px;
+  height: 400px;
+  background-color: white;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.11);
+}
+
+.Main-content-card-item-2 {
+  width: 380px;
+  height: 400px;
+  background-color: white;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.11);
+  margin-left: 89px;
+}
+
+.Main-content-card-item-1 > img {
+  margin-top: 70px;
+  height: 112px;
+  width: 112px;
+}
+
+.Main-content-card-item-1 > h2 {
+  font-size: 18px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.Main-content-card-item-1 > p {
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  line-height: 20px;
+  width: 267px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25px;
+}
+
+.Main-content-card-item-2 > img {
+  margin-top: 70px;
+  height: 112px;
+  width: 112px;
+}
+
+.Main-content-card-item-2 > h2 {
+  font-size: 18px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.Main-content-card-item-2 > p {
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  line-height: 20px;
+  width: 267px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25px;
+}
+
+.Main-content-card-submit {
+  background: none;
+  border: none;
+  color: #265EEF;
+  font-weight: bold;
+  
+}
+.search_content{
+  margin-top: 70px;
+  margin-left: 250px;
+  height: 650px;
+  width: 850px;
+}
+.search_content2{
+  margin-top: -100px;
+  margin-left: 250px;
+  height: 650px;
+  width: 850px;
+}
+.search_content3{
+  margin-top: 70px;
+  margin-left: 100px;
+  height: 650px;
+  width: 850px;
+}

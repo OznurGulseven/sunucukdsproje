@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stark Emlak - Emlak Danışmanlığı</title>
+  <!-- Search Engines -->
+  <meta property="og:title" content="Stark Emlak Danışmanlık Hizmetleri  - Hemen Al, Hemen Sat!">
+  <meta property="og:description" content="Zengin içerikli emlak sitesi Stark Emlak, bir ev almak, satmak ya da kiralamak istediğinizde size yardımcı olarak doğru kararlar vermenizi sağlar.">
+  <meta property="og:image" content="http://www.starkemlak.com">
+  <meta property="og:url" content="">
+  <!-- Twitter -->
+  <meta name="twitter:title" content="Stark Emlak Danışmanlık Hizmetleri">
+  <meta name="twitter:description" content="Ev alırken, satarken ya da kiralarken en büyük yardımcınız!">
+  <meta name="twitter:name" content="starkemlak">
+  <meta name="twitter:card" content="-">
+  <!-- file links -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" type="text/css" href="assets/normalize.css">
+  <link rel="stylesheet" type="text/css" href="assets/main.css">
+</head>
+<body>
+  <div class="wrapper">
+      <div class="container">
+        <div class="Header">
+          <a href="#">
+          <img class="Header-logo" src="src/logo.png" alt="Stark Emlak logosu">
+        </a>
+
+        <div class="Header-menu">
+            <div class="Header-menu-user">
+                <a href="#">Anasayfa</a>
+                <a href="#">Satış</a>
+                <a href="#">Alım</a>
+                <a href="#">Finans</a>
+                <a href="#">Diğerleri</a>
+            </div>
+            <div class="Header-menu-login">
+              <a href="#">Giriş Yap</a>
+            </div>
+          </div>
+        </div>
+        <div class="Main-action">
+          <h1>Benim için en uygun ev hangisi?</h1>
+          <h4>Sizin için seçilmiş olan evler birkaç tık ötenizde...</h4>
+          <form class="form-center" action="ver1.php" method="post">
+            <div class="Main-action-search">
+                <label for="Konum">Konum:</label>
+                <select name="ilkodu" id="ilkodu">
+                  <option value="İzmir" selected>İzmir</option>
+                  <!-- php -->
+                </select>
+                <label>Konut:</label>
+                <select name="konut" id="konut">
+                  <option value="Müstakil" selected>Müstakil</option>
+				  <option value="Daire" selected>Daire</option>
+                  <!-- php -->
+                </select>
+                <label>Oda Sayısı:</label>
+                <select name="odasayisi" id="odasayisi">
+                  <option value="3+1" selected>3+1</option>
+				  <option value="2+1" selected>2+1</option>
+				  <option value="1+1" selected>1+1</option>
+				  <option value="1+0" selected>1+0</option>
+                  <!-- php -->
+                </select>
+                <label>Durumu:</label>
+               <?php
+					  include("baglan.php");
+
+			$sonuc = mysqli_query($conn,"select * from  kategori order by kategoriID");
+			if(mysqli_num_rows($sonuc)>0){
+			echo '<select id="kategori" name="account" class="form-control">';
+	
+			while($oku = mysqli_fetch_assoc($sonuc)){
+			
+			echo "<option value=".$oku['kategoriID'].">".$oku['kategoriAD']."</option>";
+				}
+    echo '</select>';
+			}else{
+				echo "Hic kayit yok!";
+				} 
+				mysqli_close($conn);
+				?>
+                <input class="Main-action-alternate-submit" type="submit" name="gonderbtn" value="Ara">
+            </div>
+          </form>
+
+          <!-- alternatif form -->
+          <!-- 
+          <form>
+            <input type="text" name="text" class="Main-action-search" placeholder="Kadıköy">
+            <input type="submit" name="submit" class="Main-action-submit" value="Ara">
+          </form> -->
+        </div>
+    </header>
+    <main class="Main-content">
+      <p><strong>Stark Emlak,</strong> bir ev almak ya da satmak istediğiniz<br>her zaman yardımcı olmak için burada!</p>
+      <div class="Main-content-card">
+        <div class="Main-content-card-item-1">
+            <img src="src/sale.png" alt="Satılık ev ikonu">
+            <h2>Evimi satmak istiyorum</h2>
+            <p>Evimin pazar değeri ne kadardır? Satmak için iyi bir zaman mı? Nasıl bir danışman seçebilirim?</p>
+            <input type="submit" name="submit" class="Main-content-card-submit" value="Ev sat"> 
+        </div>
+        <div class="Main-content-card-item-2">
+            <img src="src/seller.png" alt="Satılık ev ikonu">
+            <h2>Ev almak istiyorum</h2>
+            <p>Hayal ettiğim ev ne kadar? Bu ev bu fiyata alınır mı? Bu eve nasıl teklif verebilirim?</p>
+            <input type="submit" name="submit" class="Main-content-card-submit" value="Ev sat"> 
+        </div>
+    </main>
+    
+  </div>
+  <footer>
+      Stark Emlak, tüm hakları saklıdır.
+    </footer>
+</body>
+<script src="js/main.js"></script>
+</html>
